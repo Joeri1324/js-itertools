@@ -1,0 +1,22 @@
+{
+  "name": "itertools",
+  "version": "1.0.0",
+  "description": "js implementation of python itertools",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Joeri1324/js-itertools.git"
+  },
+  "author": "joeri sleegers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Joeri1324/js-itertools/issues"
+  },
+  "homepage": "https://github.com/Joeri1324/js-itertools#readme"
+}
