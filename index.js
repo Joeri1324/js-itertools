@@ -42,12 +42,37 @@ const chain = function*(iterable) {
     }
 };
 
+/**
+ * 
+ * @param {*} iterable 
+ * @param {*} r 
+ */
+const combinations = function*(iterable, r) {
+    return 1
+};
+
+const unique = function*(iterable) {
+    seen = {};
+    for (let i=0; i < iterable.length; i++) {
+        if (seen[iterable[i]]) {
+            continue;
+        }
+
+        seen[iterable[i]] = true;
+        yield iterable[i];
+    }
+};
+
 
 // const arr = [1, 2, 3, 4, 5];
 // for(let number of accumelate(, func=add)) {
 //     console.log(number);
 // }
 
-for(let elem of chain([[1, 2], [3, 5]])) {
+// for(let elem of chain([[1, 2], [3, 5]])) {
+//     console.log(elem);
+// }
+
+for(let elem of unique([1, 1, 2, 3, 5])) {
     console.log(elem);
 }
