@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "npm test"
+    "test": "babel-node test.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,14 @@
   "bugs": {
     "url": "https://github.com/Joeri1324/js-itertools/issues"
   },
-  "homepage": "https://github.com/Joeri1324/js-itertools#readme"
+  "homepage": "https://github.com/Joeri1324/js-itertools#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1"
+  },
+  "presets": [
+    "env"
+  ]
 }
