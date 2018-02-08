@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "babel-node test.js"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -23,9 +23,13 @@
     "babel-cli": "^6.26.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
-    "babel-preset-es2015": "^6.24.1"
+    "babel-preset-es2015": "^6.24.1",
+    "jest": "^22.2.1"
   },
   "presets": [
     "env"
-  ]
+  ],
+  "dependencies": {
+    "mocha": "^5.0.0"
+  }
 }
