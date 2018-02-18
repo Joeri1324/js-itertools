@@ -1,5 +1,4 @@
 import * as iter from './lib/index.js';
-var assert = require('assert');
 
 
 test('Range works', () => {
@@ -28,6 +27,6 @@ test('Takewhile works', () => {
         );
 });
 
-for(let elem of iter.zip([iter.range(1, 5), iter.range(1, 5)])) {
-    console.log(elem);
-}
+test('count works', () => {
+    expect([0, 1, 2, 3, 4, 5]).toEqual(iter.list(iter.takeWhile((x) => x < 6, iter.count())));
+});
