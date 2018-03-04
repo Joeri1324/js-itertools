@@ -17,6 +17,10 @@ test('Accumelate works', () => {
     expect([1, 3, 6]).toEqual(iter.list(iter.accumulate(iter.range(1, 4))));
 });
 
+test('Accumlate works for product', () => {
+    expect(iter.list(iter.accumulate(iter.range(1, 5), iter.prod))).toEqual([1, 2, 6, 24]);
+});
+
 test('Takewhile works', () => {
     expect([1, 2, 3, 4])
         .toEqual(
@@ -29,4 +33,12 @@ test('Takewhile works', () => {
 
 test('count works', () => {
     expect([0, 1, 2, 3, 4, 5]).toEqual(iter.list(iter.takeWhile((x) => x < 6, iter.count())));
+});
+
+test('filterfalse works', () => {
+    expect(iter.list(iter.filterfalse(x => x % 2, iter.range(0, 10)))).toEqual([0, 2, 4, 6, 8]);
+});
+
+test('starmap works', () => {
+    expect(iter.list(iter.starmap(iter.pow, [[2, 5], [3, 2], [10,3]]))).toEqual([32, 9, 1000]);
 });
